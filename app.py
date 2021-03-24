@@ -4,7 +4,6 @@ from pyyoutube import Api as api_youtube
 app = Flask(__name__)
 
 
-
 @app.route('/lista', methods=['GET'])
 def youtube():
     print('yoooo')
