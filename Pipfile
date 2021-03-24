@@ -7,6 +7,7 @@ name = "pypi"
 flask = "1.1.2"
 python-youtube = "*"
 python-decouple = "*"
+gunicorn = "*"
 
 [dev-packages]
 
