@@ -1,7 +1,9 @@
 from settings.conf import KEY_YOUTUBE
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from pyyoutube import Api as api_youtube
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/lista', methods=['GET'])
@@ -17,6 +19,7 @@ def youtube():
             "videos": videos
         }
     except Exception as e:
+        print(e)
         resp = {
             "error": "Ups hubo un problema"
         }
