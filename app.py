@@ -12,7 +12,7 @@ def youtube():
     status_code = "200"
     try:
         api = api_youtube(api_key=KEY_YOUTUBE)
-        videos = api.search_by_keywords(q=search, search_type=["channel", "video", "playlist"], limit=10)
+        videos = api.search_by_keywords(q=search, search_type=["channel", "video", "playlist"], count=5, limit=5)
 
         resp = {
             "search": search,
